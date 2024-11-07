@@ -1,10 +1,12 @@
 pipeline{
-    agent any
+    
     environment{
-        register = "ziyathedev/vatcal"
+        registry = "ziyathedev/vatcal"
         registryCredentials = "DOCKER_LOGIN"
         dockerImage=""
     }
+
+    agent any
 
     stages{
         stage('Build Docker Image'){
